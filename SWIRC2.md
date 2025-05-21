@@ -272,7 +272,7 @@ void loop()
 }
 ```
 
-Pliki biblioteczne do sensora DHT znajdują się w archiwum SWIRC2_DHT.zip.
+Pliki biblioteczne do sensora DHT znajdują się w archiwum SWIRC2_DHT.zip (folder SWIRC2_DHT).
 
 ## 5. Wyświetlacze LED, czujniki i Raspberry
 
