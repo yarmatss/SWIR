@@ -122,17 +122,17 @@ Zadanie to polega na podłączeniu do mikrokontrolera w układzie NANO dwóch si
 
 1. Wyświetlacze podłączamy do wyprowadzeń D2-D9 oraz D10 i D11 układu NANO zgodnie ze schematem
 
-![rys_1](rys_1.png)
+![rys_1](rysunki/rys_1.png)
 
 Rezystory powinny mieć opór około 470 Ohm.
 
 2. Wyprowadzenia wyświetlacza
 
-![rys_2](rys_2.png)
+![rys_2](rysunki/rys_2.png)
 
 3. Do wejścia A0 układu NANO podłączamy fotorezystor zgodnie z poniższym schematem (A0=OUT)
 
-![rys_3](rys_3.png)
+![rys_3](rysunki/rys_3.png)
 
 4. Implementujemy program w ArduinoIDE, który będzie realizował zadanie pomiaru i wyświetlania procentowej wartości natężenia światła,\
 (a) Uruchamiamy program ArduinoIDE\
@@ -203,7 +203,7 @@ Zadanie polega na zaimplementowaniu podłączenia do mikrokontrolera w układzie
 
 1. Sensor DHT11 podłączamy do zasilania 5V oraz wyjście do pinu D12
 
-![rys_4](rys_4.png)
+![rys_4](rysunki/rys_4.png)
 
 2. Przycisk lub przełącznik należy podłączyć do wejścia D9 układu NANO
 
