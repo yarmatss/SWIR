@@ -1,4 +1,5 @@
-# 1. Wprowadzenie
+# Instrukcja do ćwiczenia 2
+## 1. Wprowadzenie
 
 Ćwiczenie to pozwala na zastosowanie i zrozumienie sensorów posiadających swoje własne układy zarządzające. Sensory tego rodzaju wymagają realizacji procesu komunikacji między danym mikroprocesorem a sterownikiem sensora. Do zrealizowania zadań komunikacja wymagana jest dla czujników:
 
@@ -16,10 +17,9 @@ Komunikacja nie jest wymagana w przypadku czujników:
 - Enkoder
 - Mikroprzełącznik
 
-# 2. Pomiar temperatury i ciśnienia
+## 2. Pomiar temperatury i ciśnienia
 
-**Zadanie 1:**
-
+**Zadanie 1:**\
 Zadanie polega na realizacji pomiaru temperatury i ciśnienia w układzie Raspberry PI3 poprzez wykorzystanie czujnika BMP180. Sensor podłączamy do następujących wyprowadzeń złącze GPIO:
 - 1: 3V3
 - 3: GPIO2 I2C.SDA
@@ -114,10 +114,9 @@ Klasa BMP085 została stworzona dla czujnika BMP085. Ponieważ sensor BMP180 jes
 - read_altitude(self, sealevel_pa=101325.0)
 - read_sealevel_pressure(self, altitude_m=0.0)
 
-# 3. Wyświetlacze LED i czujnik światła
+## 3. Wyświetlacze LED i czujnik światła
 
-**Zadanie 2:**
-
+**Zadanie 2:**\
 Zadanie to polega na podłączeniu do mikrokontrolera w układzie NANO dwóch siedmiosegmentowych wyświetlaczy LED i zaprogramowanie ich w środowisku ArduinoIDE tak by wyświetlały procentową wartość natężenia światła skalowaną na bieżąco.
 
 1. Wyświetlacze podłączamy do wyprowadzeń D2-D9 oraz D10 i D11 układu NANO zgodnie ze schematem
@@ -196,7 +195,7 @@ void loop()
 }
 ```
 
-# 4. Wyświetlacze LED, czujnik światła, temperatury i wilgotności
+## 4. Wyświetlacze LED, czujnik światła, temperatury i wilgotności
 
 **Zadanie 3:**\
 Zadanie polega na zaimplementowaniu podłączenia do mikrokontrolera w układzie NANO sensora DHT11 oraz przycisku i oprogramowaniu urządzenia tak możliwe było przełączanie wyświetlania między jasnością, wilgotnością i temperaturą.
@@ -275,7 +274,7 @@ void loop()
 
 Pliki biblioteczne do sensora DHT znajdują się w archiwum SWIRC2_DHT.zip.
 
-# 5. Wyświetlacze LED, czujniki i Raspberry
+## 5. Wyświetlacze LED, czujniki i Raspberry
 
 **Zadanie 4:**\
 Zadanie polega na opracowaniu i zaimplementowaniu oprogramowania dla układu NANO oraz Raspberry tak by mikrokomputer mógł komunikować się i odczytywać wartości mierzone przez Arduino NANO. Należy w Pythonie zaimplementować dla układu Raspberry program, który będzie pozwalał użytkownikowi wydawać komendy pozwalające na odczytywanie wartości parametrów mierzonych przez sensory,\
