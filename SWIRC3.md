@@ -1,15 +1,15 @@
 # Instrukcja do ćwiczenia 3
 ## 1. Silnik
-W ćwiczeniu tym wykorzystywany jest silnik prądu stałego z przekładnią. Silnik może być zasilany napięciem o wartości maksymalnej 6V. 
+W ćwiczeniu tym wykorzystywany jest silnik prądu stałego z przekładnią. Silnik może być zasilany napięciem o wartości maksymalnej *6V*. 
 Prąd pracy silnika jest na tyle niewielki, że może on być bez przeszkód zasilany z portu USB. 
-Na rysunku 1 został przedstawiony wyglad silnika. Wyprowadzenia S1 i S2 służą do zasilania silnika.
+Na rysunku 1 został przedstawiony wyglad silnika. Wyprowadzenia *S1* i *S2* służą do zasilania silnika.
 
 ![Rysunek 1: Wyglad](rysunki/rys_5.png)
 
 Rysunek 1: Wyglad
 
-Wyprowadzenia C1, C2 i C3 pozwalają na podłączenie się do czujnika Halla pełniącego rolę enkodera. 
-Poniższa tabela 1 przedstawia znaczenie wyprowadzeń S i C silnika:
+Wyprowadzenia *C1*, *C2* i *C3* pozwalają na podłączenie się do czujnika Halla pełniącego rolę enkodera. 
+Poniższa tabela 1 przedstawia znaczenie wyprowadzeń *S* i *C* silnika:
 
 | Wyprowadzenie | Funkcja |
 | ----------- | ----------- |
@@ -29,7 +29,6 @@ Na rysunku 2 przedstawiony został wyglad przekładni silnika.
 
 Rysunek 2: Przekładnia silnika
 
-
 Składa się ona z trybu znajdującego się na wale silnika, trzech trybów pośrednich oraz trybu na wale wyjściowym. 
 Tabela 2 przedstawia wykaz trybów składających się na przekładnie silnika. 
 W tabeli tej są również informacje odnośnie ilości zębów poszczególnych trybów. 
@@ -63,16 +62,8 @@ prędkości obrotowej tego trybu, czyli również wału wyjściowego całego 
 
 Rysunek 4: Enkoder silnika
 
-Na rysunku 4, poprzez półprzezroczystą obudowę, przedstawiono widok budowy enkodera składajacego się z czujnika Halla oraz 
-trybu z magnesami neodymowymi. Przełączalny czujnik Halla zastosowany w tym enkoderze to układ A3144. 
-Jest to przełączalny czujnik pola magnetycznego o wyjściu typu otwarty kolektor (open collector OC). 
-Wyjście otwarty kolektor charakteryzuje się tym, iż napięcie takiego wyprowadzenia jest równe zeru bądź nieokreślone czyli nieznane. 
-W celu uzyskania wartości 0/1 czyli 0V lub 5V (w układzie TTL) stosuje się rezystor podciągający do zasilania (pullup resistor) 
-natomiast rezystor podciągający do logicznego 0 to rezystor podciągający do masy (pulldown resistor). 
-Na rysunku 5 przedstawiono przykład układu z zastosowanym rezystorem podciągającym do zasilania (pullup resistor).
-
 Na rysunku 4, poprzez półprzezroczystą obudowę, przedstawiono widok budowy enkodera składającego się z czujnika Halla 
-oraz trybu z magnesami neodymowymi. Przełączalny czujnik Halla zastosowany w tym enkoderze to układ A3144. 
+oraz trybu z magnesami neodymowymi. Przełączalny czujnik Halla zastosowany w tym enkoderze to układ *A3144*. 
 Jest to przełączalny czujnik pola magnetycznego o wyjściu typu otwarty kolektor (open collector OC). 
 Wyjście otwarty kolektor charakteryzuje się tym, iż napięcie takiego wprowadzenia jest równe zeru bądź nieokreślone czyli nieznane. 
 W celu uzyskania wartości 0/1 czyli 0V lub 5V (w układzie TTL) stosuje się rezystor podciągający. 
@@ -128,6 +119,7 @@ Modulacja szerokości impulsu może być wykorzystywana do:
 - przesyłania konkretnej wartości sygnału sterującego na odległość lub po prostu do innego urządzenia
 - sterowania układem analogowym z poziomu układu cyfrowego
 - sterowania układem dużej mocy poprzez kluczowanie mocy dostarczanej do urządzenia
+
 Rysunek 6 przedstawia przebieg sygnału PWM.
 
 ![Rysunek 6: Przebieg sygnału PWM](rysunki/rys_9.png)
@@ -159,7 +151,7 @@ Tranzystor MTP75N03 jest typu N. Rysunek 8 przedstawia symbol tego tranzystora.
 Tranzystor unipolarny podłączamy w ten sposób, że:
 - bramka (Gate) to wejście, które można podłączyć bezpośrednio do układu sterującego czyli np. mikrokontrolera
 - źródło (Source), jak sama nazwa mówi, podłączamy do źródła zasilania
-czyli +5V lub masy 0V. Tranzystor typu N korzysta z ujemnego bieguna
+czyli *+5V* lub masy *0V*. Tranzystor typu N korzysta z ujemnego bieguna
 źródła zasilania czyli masy.
 - dren (Drain) to wyjście tranzystora, które podłączamy do urządzenia wyjściowego czyli silnika.
 
@@ -181,10 +173,8 @@ prędkości. Prędkość silnika niestety nie zależy tyko od podawanego napięc
 prądu lecz również od innych parametrów tego efektora jak np. moment odciążenia czy aktualna 
 prędkość silnika. Jest to spowodowane tym, iż w układach
 dynamicznych odpowiedź nie zależy tylko i włącznie od wymuszenia ale również od stanu 
-układu czyli jego parametrów wewnętrznych.
-Jeśli chcemy kontrolować prędkość silnika musimy generować sygnał ste-
-rujący na odpowiednim poziomie. Skuteczna realizacja procesu sterowania
-prędkością sinika musi być zrealizowana z wykorzystaniem informacji o aktualnej wartości 
+układu czyli jego parametrów wewnętrznych.\
+Jeśli chcemy kontrolować prędkość silnika musimy generować sygnał sterujący na odpowiednim poziomie. Skuteczna realizacja procesu sterowania prędkością sinika musi być zrealizowana z wykorzystaniem informacji o aktualnej wartości 
 prędkości efektora. Do realizacji kontroli prędkości silnika można wykorzystać regulator i sprzężenie zwrotne rys. 10.
 
 ![Rysunek 10: Regulator z pętlą sprzężenia zwrotnego](rysunki/rys_13.png)
@@ -212,7 +202,9 @@ wyznaczenia błędu niezbędne staje się obliczenie prędkości. Prędkość si
 wykorzystując enkoder silnika. W ramach implementacji obsługi
 enkodera należy zaimplementować obsługę przerwania. W pierwszej kolejności trzeba skonfigurować 
 odpowiednie wejście i powiązać z nim funkcję, która będzie zawierała kod obsługujący przerwanie i enkoder.
+
 `attachInterrupt(digitalPinToInterrupt(<inputNr>), <functionName>, <trigger>);`
+
 - **inputNr** to numer wejścia
 - **functionName** to nazwa funkcji, która zostanie uruchomiana w momencie wystąpienia przerwania
 - **trigger** to sposób generowania przerwania LOW, RISING, FALLING, CHANGE
@@ -288,12 +280,11 @@ nalna do sumy czyli całki wartości tej krzywej. Można wtedy powiedzieć, że
 całka to po prostu suma wartości.\
 Realizując człon całkujący regulatora w celu wyznaczenia całki możemy
 ograniczyć się do obliczenia sumy wartości zmiennej, którą chcemy całkować.
-Mówiąc inaczej dla każdej iteracji funkcji *loop()* w programie do całki doda-
-jemy aktualnie zmierzona wartość błędu. Na podstawie tak obliczanej całki
+Mówiąc inaczej dla każdej iteracji funkcji *loop()* w programie do całki dodajemy 
+aktualnie zmierzona wartość błędu. Na podstawie tak obliczanej całki
 wyznaczamy wartość dla członu całkującego regulatora.\
-Kolejnym członem jest człon różniczkujący. Przy obliczaniu pochodnej, po-
-dobnie jak dla całki, możemy ograniczyć się do prostych działań matematycz-
-nych. Do obliczenia pochodnej można wykorzystać po prostu różnicę wartości
+Kolejnym członem jest człon różniczkujący. Przy obliczaniu pochodnej, podobnie jak dla całki, 
+możemy ograniczyć się do prostych działań matematycznych. Do obliczenia pochodnej można wykorzystać po prostu różnicę wartości
 funkcji dla kolejnych iteracji funkcji *loop()*.\
 Odpowiedni dobór wartości współczynników *Kp*, *Ki* oraz *Kd* pozwala na zrealizowanie regulatora, 
 który wysteruje nasz efektor w sposób o jaki nam chodzi.
@@ -324,13 +315,13 @@ Z arduino do komputera proponuje się przekazywanie wiadomości zgodnie z nast
 gdzie *c* to identyfikator wartości a *X* to wartość. W tabeli 4 znajduje się definicja identyfikatorów dla komend 
 przekazywanych między urządzeniami.
 
-| znak | znaczenie                            |
-| ---- | ------------------------------------ |
-| s    | prędkość                             |
-| p    | współczynnik *Kp* regulatora         |
-| i    | współczynnik *Ki* regulatora         |
-| d    | współczynnik *Kd* regulatora         |
-| ?    | pytanie o aktualne wartości param.   |
+| znak | znaczenie                                           |
+| ---- | --------------------------------------------------- |
+| s    | prędkość                                            |
+| p    | współczynnik *Kp* regulatora                        |
+| i    | współczynnik *Ki* regulatora                        |
+| d    | współczynnik *Kd* regulatora                        |
+| ?    | pytanie o aktualne wartości parametrów regulatora   |
 
 Tabela 4: Identyfikatory komend
 
@@ -356,15 +347,15 @@ obracającego się w jedną stronę. W celu realizacji tego zadania należy
 Arduino przez tranzystor unipolarny MTP75N03 oraz podłączyć wyprowadzenia enkodera tak by możliwe było
 realizowanie zliczania impulsów poprzez wykorzystanie przerwań.
 
-- Zaimplementowanie programu sterującego prędkością silnika. W ramach realizacji tego zadania należy
-  – zaimplementować realizację pomiaru prędkości silnika.  
-  – zaimplementować możliwość wymiany informacji między Arduino a urządzeniem sterującym.  
-  – zaimplementować regulator PID  
-  – zaimplementować na Raspberry program pozwalający na realizację obsługi silnika. Program powinien:
-      * wyświetlać aktualną prędkość silnika
-      * umożliwiać zadawanie prędkości silnika
-      * umożliwiać definiowanie nastaw regulatora
-      * wyświetlać aktualne nastawy regulatora
+- Zaimplementowanie programu sterującego prędkością silnika. W ramach realizacji tego zadania należy\
+  &emsp; – zaimplementować realizację pomiaru prędkości silnika.  
+  &emsp; – zaimplementować możliwość wymiany informacji między Arduino a urządzeniem sterującym.  
+  &emsp; – zaimplementować regulator PID  
+  &emsp; – zaimplementować na Raspberry program pozwalający na realizację obsługi silnika. Program powinien:\
+  &emsp;&emsp; * wyświetlać aktualną prędkość silnika\
+  &emsp;&emsp; * umożliwiać zadawanie prędkości silnika\
+  &emsp;&emsp; * umożliwiać definiowanie nastaw regulatora\
+  &emsp;&emsp; * wyświetlać aktualne nastawy regulatora
 
 - dobrać nastawy regulatora PID tak aby sterowanie prędkością silnika było efektywne
 
